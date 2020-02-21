@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Stepper Form</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="heading">
+        <h1>My Stepper Form</h1>
+      </div>
+      <div class="stepForm step1">
+        <h3>What is your name?</h3>
+        <input type="text" name="name" id="name" required />
+        <button class="btn" id="nextBtn">Next</button>
+      </div>
+      <div class="stepForm hidden step2">
+        <h3>What is your favorite color?</h3>
+        <input type="text" name="color" id="color" required />
+        <div>
+          <button class="btn" id="prevButton">Previous</button>
+          <button class="btn" id="nextBtn">Next</button>
+        </div>
+      </div>
+      <div class="stepForm hidden step3">
+        <h3>What make of car are you driving?</h3>
+        <input type="text" name="car" id="car" required />
+        <div>
+          <button class="btn" id="prevButton">Previous</button>
+          <button class="btn" id="nextBtn">Next</button>
+        </div>
+      </div>
+      <div class="stepForm hidden step4">
+        <h3>Are you a Dog or a Cat person?</h3>
+        <div>
+          <input type="radio" id="dog" name="pet" value="dog" />
+          <label for="dog">Dog</label>
+          <input type="radio" id="cat" name="pet" value="cat" />
+          <label for="cat">Cat</label>
+        </div>
+        <div>
+          <button class="btn" id="prevButton">Previous</button>
+          <button class="btn" id="nextBtn">Next</button>
+        </div>
+      </div>
+      <div class="stepForm hidden answer" id="answer">
+        <p>
+          Hey, my name is <span id="nameValue">Werner</span> and I drive a
+          <span id="colorValue">Red</span> <span id="carValue">Ford</span> and I
+          have a picture of my <span id="petValue">dog</span> in my wallet. Do
+          you want to see it? 😊
+        </p>
+        <div class="anwserButtons">
+          <button id="yesBtn" class="btn">Yes</button>
+          <button id="noBtn" class="btn">No</button>
+        </div>
+      </div>
+    </div>
+    <div id="easter-egg1" class="hidden">
+      <img
+        src="https://yt3.ggpht.com/a/AGF-l7_vLubfCjH48gA-EvadAv-3sSJ96AeWiZBk-w=s900-c-k-c0xffffffff-no-rj-mo"
+        alt="Colt Steele"
+      />
+    </div>
+    <div id="easter-egg2" class="hidden">
+      <img
+        src="https://pbs.twimg.com/profile_images/1240975977/72405_1470885538567_1426495550_31117360_763213_n_400x400.jpg"
+        alt="Colt Steele"
+      />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
