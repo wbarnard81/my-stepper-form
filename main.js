@@ -9,6 +9,8 @@ const yesBtn = document.querySelector("#yesBtn");
 const noBtn = document.querySelector("#noBtn");
 const answerStep = document.querySelector("#answer");
 
+const stepFlow = document.querySelectorAll(".stepFlow");
+
 let formStep = 1;
 
 nextBtn.forEach(function(fbutton) {
@@ -22,7 +24,9 @@ prevBtn.forEach(function(bbutton) {
 function stepForward() {
   if (formStep < 5) {
     document.querySelector(`.step${formStep}`).classList.add("hidden");
+    stepFlow[formStep - 1].classList.remove("activeStep");
     formStep++;
+    stepFlow[formStep - 1].classList.add("activeStep");
     if (formStep < 4 || formStep === 4) {
       document.querySelector(`.step${formStep}`).classList.remove("hidden");
     }
@@ -41,18 +45,20 @@ function stepForward() {
 }
 
 function stepBackward() {
-  console.log(formStep);
   if (formStep < 5 && formStep > 1) {
     document.querySelector(`.step${formStep}`).classList.add("hidden");
+    stepFlow[formStep - 1].classList.remove("activeStep");
     formStep--;
+    stepFlow[formStep - 1].classList.add("activeStep");
+
     document.querySelector(`.step${formStep}`).classList.remove("hidden");
+
     if (formStep === 4) {
       answerStep.classList.remove("hidden");
     }
   } else {
     return;
   }
-  console.log(formStep);
 }
 
 yesBtn.addEventListener("click", function() {
